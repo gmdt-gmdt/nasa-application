@@ -101,7 +101,6 @@ async function saveLaunch(launch) {
 
 async function scheduleNewLaunch(launch) {
   const planet = await planets.findOne({ keplerName: launch.target });
-  sql.query(query);
 
   if (!planet) {
     throw new Error("No matching planet found");
